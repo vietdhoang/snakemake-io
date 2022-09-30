@@ -1,0 +1,19 @@
+# Example config file for end user.
+
+# Name of output directory. The path must be either absolute or relative to the
+# working directory
+output_dir: "/Users/viethoang/Data/test/snakemake-io-out"
+
+input_1:
+  scRNA-seq: 
+    data: "/Users/viethoang/Data/test/input_1/"
+    metadata: "/Users/viethoang/Data/test/input_1/metadata.csv"
+
+input_2:
+  scRNA-seq: 
+    data: "/Users/viethoang/Data/test/input_2/matrix.csv"
+
+input_3:
+  scATAQ-seq: 
+    data: "/data/pbmc/sample1/"
+    metadata: "/data/pbmc/sample1/metadata.csv"

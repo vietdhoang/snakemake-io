@@ -1,0 +1,14 @@
+import os
+from snakemake.utils import min_version
+min_version("7.4")
+
+include: "rules/outputs.smk"
+include: "rules/sc_rna_seq.smk"
+
+onstart:
+    if not os.path.exists(config['output_dir']):
+        os.mkdir(config['output_dir'])
+
+rule all:
+    input:
+        get_final_output(config)
